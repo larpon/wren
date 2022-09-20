@@ -5,12 +5,14 @@ module main
 
 import wren
 
+[manualfree]
 fn write_fn(vm &wren.VM, const_text &char) {
 	str := unsafe { cstring_to_vstring(const_text) }
 	println(str)
 	unsafe { str.free() }
 }
 
+[manualfree]
 fn error_fn(vm &wren.VM, error_type wren.ErrorType, const_module &char, const_line int, const_msg &char) {
 	mod := unsafe { cstring_to_vstring(const_module) }
 	msg := unsafe { cstring_to_vstring(const_msg) }
