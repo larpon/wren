@@ -44,7 +44,7 @@ fn main() {
 	@module := 'main'
 	script := 'System.print("I am running in a VM!")'
 
-	result := wren.interpret(vm, @module.str, script.str)
+	result := vm.interpret(@module, script)
 
 	match result {
 		.compile_error {
