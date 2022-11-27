@@ -18,13 +18,13 @@ fn error_fn(vm &wren.VM, error_type wren.ErrorType, const_module &char, const_li
 	msg := unsafe { cstring_to_vstring(const_msg) }
 	match error_type {
 		.compile {
-			println('$mod line $const_line: ERROR: $msg')
+			println('${mod} line ${const_line}: ERROR: ${msg}')
 		}
 		.stack_trace {
-			println('$mod line $const_line in $msg')
+			println('${mod} line ${const_line} in ${msg}')
 		}
 		.runtime {
-			println('Runtime error: $msg')
+			println('Runtime error: ${msg}')
 		}
 	}
 	unsafe { mod.free() }
