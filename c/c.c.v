@@ -3,9 +3,7 @@ module c
 
 // Chipmunk2D v7.0.3 https://github.com/slembcke/Chipmunk2D @ 68d1f31
 
-pub const (
-	used_import = 1 // TODO
-)
+pub const used_import = 1 // TODO
 
 #flag -I @VMODROOT/c/wren/src/include
 #flag -I @VMODROOT/c/wren/src/vm
